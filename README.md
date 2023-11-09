@@ -14,7 +14,7 @@ N/A
 
 Links at the top of the page bring you to their respective sections. The images under "My Work" bring you to their respective deployed project pages.
 
-![Alt Text](assets/Ryan Gurley Portfolio of Work Screenshot.png "Portfolio Website Screenshot")
+![Alt Text](assets/RyanGurleyPortfolioofWorkScreenshot.png "Portfolio Website Screenshot")
 
 ## Credits
 
