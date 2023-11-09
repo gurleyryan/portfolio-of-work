@@ -1,0 +1,195 @@
+/*Declares variables to be used throughout*/
+:root {
+    --mainColor: #86CBDA;
+    --textColor: #ffffff;
+    --secondaryColor: #192A3A;
+    --tertiaryColor: #393939;
+}
+
+/*Applies to the universal selector*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Applies to the body semantic element*/
+body {
+    background-color: #1F1F1F;
+    color: var(--textColor);
+}
+
+/*Applies to the anchor element*/
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Applies to the anchor elements upon mouse hover*/
+a:hover {
+    color: var(--mainColor);
+    text-shadow: inset 0px 0px 8px var(--mainColor), 0 0 15px var(--mainColor);
+}
+
+/*Applies to the paragraph element*/
+p {
+    font-size: 30px;
+}
+
+/*Applies to the header class of elements*/
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: var(--tertiaryColor);
+}
+
+/*Applies to the h1 element within the header parent class*/
+.header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+/*Applies to the child elements of the header parent class*/
+.header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-size: 20px;
+}
+
+/*Applies to the unordered list element under the header parent class */
+.header nav ul {
+    list-style-type: none;
+}
+
+/*Applies to the list items in the unordered list under the header parent class */
+.header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/*Applies to the gurley class*/
+.gurley {
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background: url(images/RyanGurley.jpg) #192A3A;
+    background-size: cover;
+    background-position: center;
+}
+
+/*Applies to the content class*/
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    display: inline-block;
+}
+
+/*Applies to the info class*/
+.info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: auto;
+    margin-bottom: 20px;
+    padding: 50px;
+    height: auto;
+    font-family: 'Gill Sans MT', sans-serif;
+    background-color: var(--mainColor);
+}
+
+/*Applies to the my work section*/
+.info:nth-of-type(2) {
+    flex-direction: row;
+}
+
+/*Applies to the list elements under the info class*/
+.info ul {
+    list-style-type: none;
+}
+
+/*Applies to the h2 element under the info class*/
+.info h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/*Applies to the work column class*/
+.work-column {
+    flex: 1 0 50%;
+    padding: 1.5rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+}
+
+/*Applies to the first project card*/
+.work-column:nth-of-type(1) {
+    width: 100%;
+}
+
+/*Formats the work card class to be flexbox columns*/
+.work-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--secondaryColor);
+    transition: all 0.5s ease-in-out;
+}
+
+/*Formats work card and work header classes to overlap*/
+.work-card .work-header {
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--tertiaryColor);
+    color: var(--mainColor);
+    border: 2px solid var(--secondaryColor);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+/*Creates glow around work cards on hover*/
+.work-card:hover,
+.work-card:hover .work-header {
+    box-shadow: inset 0px 0px 8px var(--secondaryColor), 0 0 15px var(--secondaryColor);
+}
+
+/*Applies to the image class*/
+.image {
+    display: flex;
+    align-items: normal;
+    max-width: 100%;
+}
+
+/*Applies to the footer class*/
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: monospace, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: var(--mainColor);
+}
+
+/*Media query for smaller screens*/
+@media screen and (min-width: 768px) {
+    .work-column {
+        flex: 1 0 100%;
+    }
+}
+
+/*Media query for larger screens*/
+@media screen and (min-width: 992px) {
+    .work-column {
+        flex: 1 0 50%;
+    }
+}
